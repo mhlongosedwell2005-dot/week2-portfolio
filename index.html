@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedwell Mhlongo - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sedwell Mhlongo</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Web Developer in Training</h2>
+            <p>Building responsive, user-friendly websites with HTML, CSS & JavaScript.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I’m Sedwell from Namakgale, Limpopo. Currently learning web development through a 12-week roadmap. Passionate about creating clean, functional websites.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Week 1 Portfolio</h3>
+                    <p>First responsive portfolio built with HTML & CSS. Deployed on Vercel.</p>
+                    <a href="#" class="btn" target="_blank">Live Demo</a>
+                    <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>Business Landing Page</h3>
+                    <p>Single-page site for a local business with contact form.</p>
+                    <a href="#" class="btn" target="_blank">Live Demo</a>
+                    <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>Flexbox Photo Gallery</h3>
+                    <p>Responsive image gallery using CSS Flexbox and media queries.</p>
+                    <a href="#" class="btn" target="_blank">Live Demo</a>
+                    <a href="#" class="btn btn-outline" target="_blank">View Code</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 & Flexbox</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+                <li>Vercel Deployment</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Let’s work together. Email: sedwell@example.com</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Sedwell Mhlongo.</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.createElement('button');
+      menuBtn.innerHTML = '☰';
+      menuBtn.className = 'menu-btn';
+      menuBtn.setAttribute('aria-label', 'Menu');
+      document.querySelector('header').prepend(menuBtn);
+      
+      const nav = document.querySelector('nav');
+      menuBtn.onclick = () => {
+        nav.classList.toggle('active');
+        menuBtn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+      };
+    </script>
+</body>
+</html>
